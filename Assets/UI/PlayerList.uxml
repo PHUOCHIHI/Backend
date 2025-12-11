@@ -1,0 +1,9 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/PlayerList.uss?fileID=7433441132597879392&amp;guid=ea7b9381547f8f946a9db2144e7b9b57&amp;type=3#PlayerList" />
+    <ui:VisualElement name="Container" class="container">
+        <ui:Label text="Player Board" class="header" />
+        <ui:VisualElement name="Board" class="board">
+            <ui:ListView name="PlayerList" class="player-list" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>
