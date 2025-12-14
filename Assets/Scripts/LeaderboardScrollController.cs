@@ -13,7 +13,7 @@ public class LeaderboardScrollController : MonoBehaviour
     public GameObject rowPrefab;        // Prefab Row chứa các Text (TMP)
 
     [Header("Server")] 
-    public string serverUrl = "http://localhost:5185/api/User";
+    public string serverUrl = "http://localhost:5000/api/auth/users";
 
     private readonly List<GameObject> spawnedRows = new List<GameObject>();
 

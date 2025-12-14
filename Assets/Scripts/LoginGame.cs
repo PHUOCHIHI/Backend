@@ -14,16 +14,18 @@ public class LoginGame : MonoBehaviour
     public GameObject loginPanel;
     public GameObject registerPanel;
     public GameObject listPanel;
-    private string baseUrl = "http://localhost:5185";
-    private string loginEndpoint = "/api/APIGame/Login";
+    [SerializeField] private bool showLoginPanelOnAwake = true;
+    private string baseUrl = "http://localhost:5000";
+    private string loginEndpoint = "/api/auth/login";
     private string avatarPath = "/uploads/avatars/";
 
     private void Awake()
     {
-        // Đảm bảo trạng thái UI lúc mới vào game:
-        // - Hiện panel đăng nhập
-        // - Ẩn panel đăng ký
-        // - Ẩn panel danh sách/BXH
+        if (!showLoginPanelOnAwake)
+        {
+            return;
+        }
+
         if (loginPanel != null)
         {
             loginPanel.SetActive(true);

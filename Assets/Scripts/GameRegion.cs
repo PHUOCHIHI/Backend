@@ -18,7 +18,7 @@ public class GameRegion : MonoBehaviour
 
     private IEnumerator GetRegion()
     {
-        using (UnityWebRequest www = UnityWebRequest.Get("http://localhost:5185/api/APIGame/GetAllRegion"))
+        using (UnityWebRequest www = UnityWebRequest.Get("http://localhost:5000/api/regions"))
         {
             yield return www.SendWebRequest();
 

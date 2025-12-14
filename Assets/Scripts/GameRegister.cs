@@ -41,7 +41,7 @@ public class GameRegister : MonoBehaviour
             yield break;
         }
 
-        using (UnityWebRequest www = new UnityWebRequest("http://localhost:5185/api/APIGame/Register","POST"))
+        using (UnityWebRequest www = new UnityWebRequest("http://localhost:5000/api/auth/register","POST"))
         {
             byte[] bodyRaw = System.Text.Encoding.UTF8.GetBytes(body);
             www.uploadHandler = new UploadHandlerRaw(bodyRaw);

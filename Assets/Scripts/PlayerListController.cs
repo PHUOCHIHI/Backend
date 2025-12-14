@@ -9,7 +9,7 @@ public class PlayerListController : MonoBehaviour
 {
     public UIDocument uiDocument;
     [Tooltip("Set your API URL here")]
-    public string serverUrl = "http://localhost:5185/api/User";
+    public string serverUrl = "http://localhost:5000/api/auth/users";
     
     private ListView playerListView;
     private List<PlayerRow> players = new List<PlayerRow>();

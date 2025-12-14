@@ -10,6 +10,8 @@ public class GameLevel : MonoBehaviour
 {
     public GameObject PrefabGameLevel;
     public RectTransform ParentGameLevel;
+    [Tooltip("Set your API URL here")]
+    public string serverUrl = "http://localhost:5000/api/APIGame/GetAllGameLevel";
 
     private void Start()
     {
@@ -18,7 +20,7 @@ public class GameLevel : MonoBehaviour
 
     private IEnumerator GetRequestAPIGameLevel()
     {
-        using (UnityWebRequest www = UnityWebRequest.Get("http://localhost:5185/api/APIGame/GetAllGameLevel"))
+        using (UnityWebRequest www = UnityWebRequest.Get(serverUrl))
         {
             yield return www.SendWebRequest();
 
